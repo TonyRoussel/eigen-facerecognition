@@ -10,7 +10,7 @@ def qr(toCompute, maxIter = 100):
         q, R = qrDecomposition(A[0])
         A[1] = np.dot(R, q)
         Q = Q.dot(q)
-        print "QR: ", k, "/", maxIter
+        # print "QR: ", k, "/", maxIter
     return np.diagonal(A[1]), Q
 
 def qrDecomposition(A):
