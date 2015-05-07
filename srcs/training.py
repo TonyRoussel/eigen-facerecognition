@@ -9,16 +9,16 @@ def concatMatrix(mtxLst):
     return mtx.transpose()
 
 def extractEigenvecOnVal(eigval, eigvec, threshold = 1):
-    valLst = []
-    for idx, val in enumerate(eigval):
-        if val >= threshold:
-            valLst.append(eigvec[:, idx])
-    return valLst
+    delIdx = np.where(eigval < threshold)[0]
+    return np.delete(eigvec, delIdx, axis=1)
 
 def reconstructVector(M, eigvec):
-    for idx, vec in enumerate(eigvec):
-        eigvec[idx] = np.dot(M, vec)
-    return eigvec
+    eigvecT = eigvec.transpose()
+    newmatrix = np.empty(np.shape(eigvecT))
+    for idx, vec in enumerate(eigvecT):
+        newvec = np.dot(M, vec.transpose())
+        newmatrix[idx] = newvec
+    return newmatrix.transpose()
 
 def gradientDescent(x, y, theta, alpha, m, numIterations):
     xTrans = x.transpose()
