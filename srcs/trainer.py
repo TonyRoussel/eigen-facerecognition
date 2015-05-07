@@ -4,7 +4,7 @@ import training as trn
 from qr import qr
 
 print "toCompute Matrix: \n", mtxLst
-M = trn.concatMatrix(mtxLst) ##########
+M = trn.concatMatrix(mtxLst)
 print "post concatenation Matrix: \n", M
 M = M - M.mean()
 print "post mean sub Matrix: \n", M
@@ -19,3 +19,5 @@ eigenvec = trn.reconstructVector(Mtld, eigenvec)
 print "eigenvec post reconstruct: \n", eigenvec
 eigenvec = np.row_stack((np.ones(np.shape(eigenvec)[1]), eigenvec))
 print "eigenvec post ones: \n", eigenvec
+eigenvec = eigenvec.transpose()
+print "eigenvec post transpose: \n", eigenvec
