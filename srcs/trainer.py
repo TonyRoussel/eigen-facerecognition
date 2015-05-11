@@ -17,7 +17,17 @@ eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec)
 print "eigenvec post extract: \n", eigenvec
 eigenvec = trn.reconstructVector(Mtld, eigenvec)
 print "eigenvec post reconstruct: \n", eigenvec
-eigenvec = np.row_stack((np.ones(np.shape(eigenvec)[1]), eigenvec))
+# eigenvec = np.row_stack((np.ones(np.shape(eigenvec)[1]), eigenvec))
+eigenvec = np.insert(eigenvec, 0, np.ones(np.shape(eigenvec)[0]), axis=1)
 print "eigenvec post ones: \n", eigenvec
-eigenvec = eigenvec.transpose()
-print "eigenvec post transpose: \n", eigenvec
+# eigenvec = eigenvec.transpose()
+# print "eigenvec post transpose: \n", eigenvec
+imgA = Mtld.transpose()[0]
+imgA = imgA.transpose()
+theta = np.ones(np.shape(eigenvec)[0])
+print "x: \n", np.shape(eigenvec)
+print "theta: \n", np.shape(theta)
+print "y: \n", np.shape(imgA)
+theta = trn.gradDescent(eigenvec, imgA, theta, 0.0001, 10000)
+print "final theta: \n", theta
+print np.dot(theta, eigenvec)
