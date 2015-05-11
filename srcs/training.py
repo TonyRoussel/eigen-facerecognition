@@ -25,16 +25,14 @@ def computeCostMulti(X, y, theta):
     diff = H - y
     diff = np.power(diff, 2)
     sdiff = np.sum(diff, axis=0)
-    return (sdiff / (2 * (np.shape(y)[0])))
+    return (sdiff / (2. * (np.shape(y)[0])))
 
 def gradDescent(X, y, theta, alpha, numIter = 100):
     m = np.shape(y)[0]
     for i in range(numIter):
         H = np.dot(X, theta)
         diff = H - y
-        diffm = np.multiply(X, diff)
-        sdiff = np.sum(diffm, axis=0).transpose()
-        sigma = np.multiply(1. / m, sdiff)
+        sigma = np.dot(X.transpose(), diff) / m
         theta = theta - alpha * sigma
         print "Cost: ", computeCostMulti(X, y, theta)
     return theta
