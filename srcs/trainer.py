@@ -28,7 +28,7 @@ theta = np.random.rand(np.shape(eigenvec)[1])
 print "x: \n", eigenvec
 print "theta: \n", theta
 print "y: \n", imgA
-theta = trn.gradDescent(eigenvec, np.matrix(imgA), np.matrix(theta).transpose(), 1e-16, 500)
+theta = trn.gradDescent(eigenvec, np.matrix(imgA), np.matrix(theta).transpose(), 1e-16, 100)
 print "eigenvec : \n", eigenvec
 print "final theta: \n", theta
 print "imgA : \n", imgA 
