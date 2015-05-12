@@ -34,5 +34,5 @@ def gradDescent(X, y, theta, alpha, numIter = 100):
         diff = H.transpose() - y
         sigma = np.dot(X.transpose(), diff.transpose()) / m
         theta = theta - alpha * sigma
-        print "Cost ", i + 1, " / ", numIter, ": ", computeCostMulti(X, y, theta)
+        # print "Cost ", i + 1, " / ", numIter, ": ", computeCostMulti(X, y, theta)
     return theta
