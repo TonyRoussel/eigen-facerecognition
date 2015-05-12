@@ -22,17 +22,17 @@ def reconstructVector(M, eigvec):
 
 def computeCostMulti(X, y, theta):
     H = np.dot(X, theta)
-    diff = H - y
+    diff = H.transpose() - y
     diff = np.power(diff, 2)
-    sdiff = np.sum(diff, axis=0)
+    sdiff = np.sum(diff, axis=1)
     return (sdiff / (2. * (np.shape(y)[0])))
 
 def gradDescent(X, y, theta, alpha, numIter = 100):
     m = np.shape(y)[0]
     for i in range(numIter):
         H = np.dot(X, theta)
-        diff = H - y
-        sigma = np.dot(X.transpose(), diff) / m
+        diff = H.transpose() - y
+        sigma = np.dot(X.transpose(), diff.transpose()) / m
         theta = theta - alpha * sigma
-        print "Cost: ", computeCostMulti(X, y, theta)
+        print "Cost ", i, " / ", numIter, ": ", computeCostMulti(X, y, theta)
     return theta
