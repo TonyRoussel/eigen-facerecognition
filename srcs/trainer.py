@@ -24,11 +24,11 @@ print "eigenvec post ones: \n", eigenvec
 # print "eigenvec post transpose: \n", eigenvec
 imgA = Mtld.transpose()[0]
 imgA = imgA.transpose()
-theta = np.random.rand(1, np.shape(eigenvec)[1])
+theta = np.random.rand(np.shape(eigenvec)[1])
 print "x: \n", eigenvec
 print "theta: \n", theta
 print "y: \n", imgA
-theta = trn.gradDescent(eigenvec, np.matrix(imgA), np.matrix(theta).transpose(), 0.00001, 10000)
+theta = trn.gradDescent(eigenvec, np.matrix(imgA), np.matrix(theta).transpose(), 1e-16, 500)
 print "eigenvec : \n", eigenvec
 print "final theta: \n", theta
 print "imgA : \n", imgA 

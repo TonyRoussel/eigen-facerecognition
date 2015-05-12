@@ -53,5 +53,11 @@ I = np.array([
     [11, 12, 7],
 ])
 
-mtxLst = [A, B, C]
+J = np.random.random_integers(0, 255, (100, 100))
+K = np.random.random_integers(0, 255, (100, 100))
+L = np.random.random_integers(0, 255, (100, 100))
+
+# mtxLst = [A, B, C]
+# mtxLst = [D, E, F]
+mtxLst = [J, K, L]
 # !Test data
