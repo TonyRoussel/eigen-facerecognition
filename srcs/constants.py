@@ -53,9 +53,9 @@ I = np.array([
     [11, 12, 7],
 ])
 
-J = np.random.random_integers(0, 255, (100, 100))
-K = np.random.random_integers(0, 255, (100, 100))
-L = np.random.random_integers(0, 255, (100, 100))
+J = np.random.random_integers(0, 255, (3, 3))
+K = np.random.random_integers(0, 255, (3, 3))
+L = np.random.random_integers(0, 255, (3, 3))
 
 # mtxLst = [A, B, C]
 # mtxLst = [D, E, F]

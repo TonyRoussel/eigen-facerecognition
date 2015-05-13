@@ -37,8 +37,8 @@ from qr import qr
 def train(mtxLst):
     thetas = list()
     M = trn.concatMatrix(mtxLst)
-    Mmean = M.mean()
-    M = M - Mmean
+    Mmean = M.mean(axis=1)
+    M -= Mmean[:, np.newaxis]
     Mtld = np.dot(M.transpose(), M)
     n = np.shape(Mtld)[1]
     eigenval, eigenvec = qr(Mtld)
