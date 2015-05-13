@@ -7,17 +7,17 @@ import numpy as np
 
 A = np.array([
     [1, 2],
-    [3, 4],
+    [6, 1],
 ])
 
 B = np.array([
-    [5, 6],
-    [7, 8],
+    [1, 6],
+    [7, 3],
 ])
 
 C = np.array([
     [ 9, 10],
-    [11, 12],
+    [1, 2],
 ])
 
 D = np.array([
@@ -57,7 +57,7 @@ J = np.random.random_integers(0, 255, (3, 3))
 K = np.random.random_integers(0, 255, (3, 3))
 L = np.random.random_integers(0, 255, (3, 3))
 
-# mtxLst = [A, B, C]
+mtxLst = [A, B, C]
 # mtxLst = [D, E, F]
-mtxLst = [J, K, L]
+# mtxLst = [J, K, L]
 # !Test data

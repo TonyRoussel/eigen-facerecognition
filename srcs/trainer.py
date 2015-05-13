@@ -38,16 +38,22 @@ def train(mtxLst):
     thetas = list()
     M = trn.concatMatrix(mtxLst)
     Mmean = M.mean(axis=1)
+    print "M :\n", M ##########
+    print "Mmean :\n", Mmean ##########
     M -= Mmean[:, np.newaxis]
     Mtld = np.dot(M.transpose(), M)
     n = np.shape(Mtld)[1]
     eigenval, eigenvec = qr(Mtld)
     eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec)
     eigenvec = trn.reconstructVector(Mtld, eigenvec)
-    eigenvec = np.insert(eigenvec, 0, np.ones(np.shape(eigenvec)[0]), axis=1)
+    eigenvecOne = np.insert(eigenvec, 0, np.ones(np.shape(eigenvec)[0]), axis=1)
     for i in range(n):
         img = Mtld.transpose()[i]
-        theta = np.random.rand(np.shape(eigenvec)[1])
-        theta = trn.gradDescent(eigenvec, np.matrix(img), np.matrix(theta).transpose(), 1e-16, 150)
+        theta = np.random.rand(np.shape(eigenvecOne)[1])
+        print "eigenvecOne shape: ", np.shape(eigenvecOne) ###########
+        print "np.matrix(img) shape: ", np.shape(np.matrix(img)) ####
+        theta = trn.gradDescent(eigenvecOne, np.matrix(img), np.matrix(theta).transpose(), 1e-4, 200)
         thetas.append(theta)
+    print "Mtld[0]: \n", Mtld[0]
+    print "eigenvec * theta: \n", np.dot(eigenvecOne, thetas[0])
     return (Mmean, eigenvec, thetas)
