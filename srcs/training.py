@@ -29,7 +29,7 @@ def computeCostMulti(X, y, theta):
     cost = sdiff / (2. * (np.shape(y)[0]))
     return cost
 
-def gradDescent(X, y, theta, alpha, numIter = 10000):
+def gradDescent(X, y, theta, alpha, numIter = 100000):
     m = np.shape(y)[0]
     # i = 0
     # cost = computeCostMulti(X, y, theta)
@@ -44,8 +44,7 @@ def gradDescent(X, y, theta, alpha, numIter = 10000):
         # costp = cost
         # cost = computeCostMulti(X, y, theta)
         # diff = costp - cost
-        print "Cost ", i + 1, " / ", numIter, ": ", computeCostMulti(X, y, theta)
+        # print "Cost ", i + 1, " / ", numIter, ": ", computeCostMulti(X, y, theta)
         # print "Loop ", i + 1, ": ", diff
         # i = i + 1
-    print "Descent terminated" ######
     return theta

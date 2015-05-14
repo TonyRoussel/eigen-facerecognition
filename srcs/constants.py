@@ -65,13 +65,17 @@ P = np.random.random_integers(0, 255, (100, 100))
 
 meryl01 = misc.imread('../faceset/faces/sample_train/Meryl_Streep_0001.pgm')
 meryl02 = misc.imread('../faceset/faces/sample_train/Meryl_Streep_0002.pgm')
+meryl04 = misc.imread('../faceset/faces/sample_train/Meryl_Streep_0004.pgm')
+meryl03 = misc.imread('../faceset/faces/sample_valid/Meryl_Streep_0003.pgm')
 
 zinedine01 = misc.imread('../faceset/faces/sample_train/Zinedine_Zidane_0001.pgm')
 zinedine02 = misc.imread('../faceset/faces/sample_train/Zinedine_Zidane_0002.pgm')
+zinedine04 = misc.imread('../faceset/faces/sample_train/Zinedine_Zidane_0004.pgm')
+zinedine03 = misc.imread('../faceset/faces/sample_valid/Zinedine_Zidane_0003.pgm')
 
 # mtxLst = [A, B, C]
 # mtxLst = [D, E, F]
 # mtxLst = [J, K, L]
 # mtxLst = [J, K, L, M, N, O, P]
-mtxLst = [meryl01, meryl02, zinedine01, zinedine02]
+mtxLst = [meryl01, meryl02, meryl04, zinedine01, zinedine02, zinedine04]
 # !Test data

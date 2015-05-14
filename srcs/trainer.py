@@ -53,11 +53,12 @@ def train(mtxLst):
         # print "np.matrix(img) :", type(np.matrix(img)), np.shape(np.matrix(img)) ###
         # print "np.matrix(theta).transpose() :", type(np.matrix(theta).transpose()), np.shape(np.matrix(theta).transpose()) ###
         theta = trn.gradDescent(eigenvecOne, np.matrix(img), np.matrix(theta).transpose(), 6e-9)
+        print "Descent terminated: ", i, " / ", n - 1  ######
         thetas.append(theta)
-    print "M[0]: \n", M.transpose()[0]
-    print "eigenvecOne * thetas[0]: \n", np.dot(eigenvecOne, thetas[0])
-    print "M[1]: \n", M.transpose()[0]
-    print "eigenvecOne * thetas[1]: \n", np.dot(eigenvecOne, thetas[0])
-    print "M[2]: \n", M.transpose()[0]
-    print "eigenvecOne * thetas[2]: \n", np.dot(eigenvecOne, thetas[0])
+    # print "M[0]: \n", M.transpose()[0]
+    # print "eigenvecOne * thetas[0]: \n", np.dot(eigenvecOne, thetas[0])
+    # print "M[1]: \n", M.transpose()[0]
+    # print "eigenvecOne * thetas[1]: \n", np.dot(eigenvecOne, thetas[0])
+    # print "M[2]: \n", M.transpose()[0]
+    # print "eigenvecOne * thetas[2]: \n", np.dot(eigenvecOne, thetas[0])
     return (Mmean, eigenvec, thetas)
