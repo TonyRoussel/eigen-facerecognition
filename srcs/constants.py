@@ -21,18 +21,18 @@ C = np.array([
 ])
 
 D = np.array([
-    [1, 2, 6],
-    [3, 4, 8],
+    [1, 2],
+    [3, 4],
 ])
 
 E = np.array([
-    [5, 6, 2],
-    [7, 8, 9],
+    [5, 6],
+    [7, 8],
 ])
 
 F = np.array([
-    [ 9, 10, 3],
-    [11, 12, 7],
+    [ 9, 10],
+    [11, 12],
 ])
 
 G = np.array([
@@ -53,11 +53,11 @@ I = np.array([
     [11, 12, 7],
 ])
 
-J = np.random.random_integers(0, 255, (3, 3))
-K = np.random.random_integers(0, 255, (3, 3))
-L = np.random.random_integers(0, 255, (3, 3))
+J = np.random.random_integers(0, 255, (100, 100))
+K = np.random.random_integers(0, 255, (100, 100))
+L = np.random.random_integers(0, 255, (100, 100))
 
-mtxLst = [A, B, C]
+# mtxLst = [A, B, C]
 # mtxLst = [D, E, F]
-# mtxLst = [J, K, L]
+mtxLst = [J, K, L]
 # !Test data
