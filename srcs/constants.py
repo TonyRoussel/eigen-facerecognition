@@ -1,3 +1,5 @@
+from scipy import misc
+
 training_path = "../faceset/faces/"
 img_extension = ".pgm"
 
@@ -56,8 +58,20 @@ I = np.array([
 J = np.random.random_integers(0, 255, (100, 100))
 K = np.random.random_integers(0, 255, (100, 100))
 L = np.random.random_integers(0, 255, (100, 100))
+M = np.random.random_integers(0, 255, (100, 100))
+N = np.random.random_integers(0, 255, (100, 100))
+O = np.random.random_integers(0, 255, (100, 100))
+P = np.random.random_integers(0, 255, (100, 100))
+
+meryl01 = misc.imread('../faceset/faces/sample_train/Meryl_Streep_0001.pgm')
+meryl02 = misc.imread('../faceset/faces/sample_train/Meryl_Streep_0002.pgm')
+
+zinedine01 = misc.imread('../faceset/faces/sample_train/Zinedine_Zidane_0001.pgm')
+zinedine02 = misc.imread('../faceset/faces/sample_train/Zinedine_Zidane_0002.pgm')
 
 # mtxLst = [A, B, C]
 # mtxLst = [D, E, F]
-mtxLst = [J, K, L]
+# mtxLst = [J, K, L]
+# mtxLst = [J, K, L, M, N, O, P]
+mtxLst = [meryl01, meryl02, zinedine01, zinedine02]
 # !Test data

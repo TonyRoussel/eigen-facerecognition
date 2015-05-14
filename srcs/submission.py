@@ -9,6 +9,6 @@ def submit(mtx, mean, eigenvec):
     # print "eigenvecOne :", type(eigenvecOne), np.shape(eigenvecOne) ###
     # print "np.matrix(mtxflat).transpose() :", type(np.matrix(mtxflat).transpose()), np.shape(np.matrix(mtxflat).transpose()) ###
     # print "np.matrix(theta).transpose() :", type(np.matrix(theta).transpose()), np.shape(np.matrix(theta).transpose()) ###
-    theta = gradDescent(eigenvecOne, np.matrix(mtxflat).transpose(), np.matrix(theta).transpose(), 1e-16, 150)
+    theta = gradDescent(eigenvecOne, np.matrix(mtxflat).transpose(), np.matrix(theta).transpose(), 6e-9)
     return theta
 

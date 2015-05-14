@@ -26,14 +26,26 @@ def computeCostMulti(X, y, theta):
     diff = H.transpose() - y
     diff = np.power(diff, 2)
     sdiff = np.sum(diff, axis=1)
-    return (sdiff / (2. * (np.shape(y)[0])))
+    cost = sdiff / (2. * (np.shape(y)[0]))
+    return cost
 
-def gradDescent(X, y, theta, alpha, numIter = 100):
+def gradDescent(X, y, theta, alpha, numIter = 10000):
     m = np.shape(y)[0]
+    # i = 0
+    # cost = computeCostMulti(X, y, theta)
+    # costp = cost + 1
+    # diff = costp - cost
+    # while (diff > 0,1):
     for i in range(numIter):
         H = np.dot(X, theta)
         diff = H.transpose() - y
         sigma = np.dot(X.transpose(), diff.transpose()) / m
         theta = theta - alpha * sigma
+        # costp = cost
+        # cost = computeCostMulti(X, y, theta)
+        # diff = costp - cost
         print "Cost ", i + 1, " / ", numIter, ": ", computeCostMulti(X, y, theta)
+        # print "Loop ", i + 1, ": ", diff
+        # i = i + 1
+    print "Descent terminated" ######
     return theta
