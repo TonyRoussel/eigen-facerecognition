@@ -14,7 +14,8 @@ def extractEigenvecOnVal(eigval, eigvec, threshold = 1):
 
 def reconstructVector(M, eigvec):
     eigvecT = eigvec.transpose()
-    newmatrix = np.empty(np.shape(eigvecT))
+    szeNewM = (np.shape(eigvec)[1], np.shape(M)[0])
+    newmatrix = np.empty(szeNewM)
     for idx, vec in enumerate(eigvecT):
         newvec = np.dot(M, vec.transpose())
         newmatrix[idx] = newvec

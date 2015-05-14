@@ -38,22 +38,25 @@ def train(mtxLst):
     thetas = list()
     M = trn.concatMatrix(mtxLst)
     Mmean = M.mean(axis=1)
-    print "M :\n", M ##########
-    print "Mmean :\n", Mmean ##########
     M -= Mmean[:, np.newaxis]
     Mtld = np.dot(M.transpose(), M)
     n = np.shape(Mtld)[1]
     eigenval, eigenvec = qr(Mtld)
     eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec)
-    eigenvec = trn.reconstructVector(Mtld, eigenvec)
+    eigenvec = trn.reconstructVector(M, eigenvec)
     eigenvecOne = np.insert(eigenvec, 0, np.ones(np.shape(eigenvec)[0]), axis=1)
     for i in range(n):
-        img = Mtld.transpose()[i]
+        img = M.transpose()[i]
         theta = np.random.rand(np.shape(eigenvecOne)[1])
-        print "eigenvecOne shape: ", np.shape(eigenvecOne) ###########
-        print "np.matrix(img) shape: ", np.shape(np.matrix(img)) ####
-        theta = trn.gradDescent(eigenvecOne, np.matrix(img), np.matrix(theta).transpose(), 1e-4, 200)
+        # print "eigenvecOne :", type(eigenvecOne), np.shape(eigenvecOne) ###
+        # print "np.matrix(img) :", type(np.matrix(img)), np.shape(np.matrix(img)) ###
+        # print "np.matrix(theta).transpose() :", type(np.matrix(theta).transpose()), np.shape(np.matrix(theta).transpose()) ###
+        theta = trn.gradDescent(eigenvecOne, np.matrix(img), np.matrix(theta).transpose(), 1e-2, 700)
         thetas.append(theta)
-    print "Mtld[0]: \n", Mtld[0]
-    print "eigenvec * theta: \n", np.dot(eigenvecOne, thetas[0])
+    print "M[0]: \n", M.transpose()[0]
+    print "eigenvecOne * thetas[0]: \n", np.dot(eigenvecOne, thetas[0])
+    print "M[1]: \n", M.transpose()[0]
+    print "eigenvecOne * thetas[1]: \n", np.dot(eigenvecOne, thetas[0])
+    print "M[2]: \n", M.transpose()[0]
+    print "eigenvecOne * thetas[2]: \n", np.dot(eigenvecOne, thetas[0])
     return (Mmean, eigenvec, thetas)
