@@ -50,7 +50,7 @@ def gradDescentConvergence(X, y, theta, alpha):
     cost = computeCostMulti(X, y, theta)
     costp = cost + 1
     diff = costp - cost
-    while (diff > 0.01):
+    while (diff > 1e-20):
         H = np.dot(X, theta)
         diff = H.transpose() - y
         sigma = np.dot(X.transpose(), diff.transpose()) / m
