@@ -2,7 +2,8 @@ from scipy import misc
 
 training_path = "../faceset/faces/"
 img_extension = ".pgm"
-
+learRate = 4e-9
+# learRate = 1e-3
 
 # Test data
 import numpy as np
@@ -63,15 +64,15 @@ N = np.random.random_integers(0, 255, (100, 100))
 O = np.random.random_integers(0, 255, (100, 100))
 P = np.random.random_integers(0, 255, (100, 100))
 
-meryl01 = misc.imread('../faceset/faces/sample_train/Meryl_Streep_0001.pgm')
-meryl02 = misc.imread('../faceset/faces/sample_train/Meryl_Streep_0002.pgm')
-meryl04 = misc.imread('../faceset/faces/sample_train/Meryl_Streep_0004.pgm')
-meryl03 = misc.imread('../faceset/faces/sample_valid/Meryl_Streep_0003.pgm')
+meryl01 = misc.imread('../faceset/faces/Meryl_Streep_0001.pgm')
+meryl02 = misc.imread('../faceset/faces/Meryl_Streep_0002.pgm')
+meryl04 = misc.imread('../faceset/faces/Meryl_Streep_0004.pgm')
+meryl03 = misc.imread('../faceset/faces/Meryl_Streep_0003.pgm')
 
-zinedine01 = misc.imread('../faceset/faces/sample_train/Zinedine_Zidane_0001.pgm')
-zinedine02 = misc.imread('../faceset/faces/sample_train/Zinedine_Zidane_0002.pgm')
-zinedine04 = misc.imread('../faceset/faces/sample_train/Zinedine_Zidane_0004.pgm')
-zinedine03 = misc.imread('../faceset/faces/sample_valid/Zinedine_Zidane_0003.pgm')
+zinedine01 = misc.imread('../faceset/faces/Zinedine_Zidane_0001.pgm')
+zinedine02 = misc.imread('../faceset/faces/Zinedine_Zidane_0002.pgm')
+zinedine04 = misc.imread('../faceset/faces/Zinedine_Zidane_0004.pgm')
+zinedine03 = misc.imread('../faceset/faces/Zinedine_Zidane_0003.pgm')
 
 # mtxLst = [A, B, C]
 # mtxLst = [D, E, F]

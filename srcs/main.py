@@ -32,7 +32,6 @@ print "M5 delta", np.absolute(np.sum(thetas[5] - thetaSubmit))
 
 thetaSubmit = submit(zinedine03, mean, eigenvec)
 print "\n"
-print thetaSubmit
 print "M0 delta", np.absolute(np.sum(thetas[0] - thetaSubmit))
 print "M1 delta", np.absolute(np.sum(thetas[1] - thetaSubmit))
 print "M2 delta", np.absolute(np.sum(thetas[2] - thetaSubmit))
@@ -43,7 +42,6 @@ print "M5 delta target", np.absolute(np.sum(thetas[5] - thetaSubmit))
 
 thetaSubmit = submit(meryl03, mean, eigenvec)
 print "\n"
-print thetaSubmit
 print "M0 delta target", np.absolute(np.sum(thetas[0] - thetaSubmit))
 print "M1 delta target", np.absolute(np.sum(thetas[1] - thetaSubmit))
 print "M2 delta target", np.absolute(np.sum(thetas[2] - thetaSubmit))
