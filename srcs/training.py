@@ -29,22 +29,35 @@ def computeCostMulti(X, y, theta):
     cost = sdiff / (2. * (np.shape(y)[0]))
     return cost.item(0)
 
-def gradDescent(X, y, theta, alpha, numIter = 50000):
+def gradDescent(X, y, theta, alpha, numIter = None):
+    if numIter is None:
+        return gradDescentConvergence(X, y, theta, alpha)
+    return gradDescentIteration(X, y, theta, alpha, numIter)
+
+def gradDescentIteration(X, y, theta, alpha, numIter):
     m = np.shape(y)[0]
-#     i = 0
-#     cost = computeCostMulti(X, y, theta)
-#     costp = cost + 1
-#     diff = costp - cost
-#     while (diff > 0.01):
     for i in range(numIter):
         H = np.dot(X, theta)
         diff = H.transpose() - y
         sigma = np.dot(X.transpose(), diff.transpose()) / m
         theta = theta - alpha * sigma
-#         costp = cost
-#         cost = computeCostMulti(X, y, theta)
-#         diff = costp - cost
         # print "Cost ", i + 1, " / ", numIter, ": ", computeCostMulti(X, y, theta)
+    return theta
+
+def gradDescentConvergence(X, y, theta, alpha):
+    m = np.shape(y)[0]
+    i = 0
+    cost = computeCostMulti(X, y, theta)
+    costp = cost + 1
+    diff = costp - cost
+    while (diff > 0.01):
+        H = np.dot(X, theta)
+        diff = H.transpose() - y
+        sigma = np.dot(X.transpose(), diff.transpose()) / m
+        theta = theta - alpha * sigma
+        costp = cost
+        cost = computeCostMulti(X, y, theta)
+        diff = costp - cost
 #         print "Loop ", i + 1, ": ", diff
-#         i = i + 1
+        i = i + 1
     return theta
