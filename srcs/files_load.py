@@ -15,7 +15,7 @@ def loadmatrixs(path):
             continue
         img = misc.imread(path + filename)
         matrixs.append((filename, img))
-        usleep(500)
+        usleep(250)
         print "file loading: ", i, " / ", sze #####
         if i == cst.fileloadLimit:
             break
