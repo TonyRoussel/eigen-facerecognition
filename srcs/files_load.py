@@ -1,6 +1,9 @@
 from scipy import misc
 import constants as cst
 import os
+import time
+
+usleep = lambda x: time.sleep(x/1000000.0)
 
 def loadmatrixs(path):
     matrixs = []
@@ -10,7 +13,9 @@ def loadmatrixs(path):
     for i, filename in enumerate(os.listdir(path)):
         if not filename.endswith(cst.img_extension):
             continue
-        matrixs.append((filename, misc.imread(path + filename)))
+        img = misc.imread(path + filename)
+        matrixs.append((filename, img))
+        usleep(500)
         print "file loading: ", i, " / ", sze #####
         if i == cst.fileloadLimit:
             break
