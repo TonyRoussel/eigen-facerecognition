@@ -58,6 +58,7 @@ def gradDescentConvergence(X, y, theta, alpha):
         costp = cost
         cost = computeCostMulti(X, y, theta)
         diff = costp - cost
-#         print "Loop ", i + 1, ": ", diff
+        # print "Loop ", i + 1, ": ", diff
         i = i + 1
+    print "convergence cost: ", computeCostMulti(X, y, theta)
     return theta

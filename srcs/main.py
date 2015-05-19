@@ -16,7 +16,7 @@ ftrainD, mtrainD = zip(*trainD)
 mean, eigenvec, thetas = train(mtrainD)
 print "Mean: ", mean
 print "eigenvec: \n", eigenvec
-print "thetas: \n", thetas
+# print "thetas: \n", thetas
 count = 0
 for idx, data in enumerate(validD):
     success = False

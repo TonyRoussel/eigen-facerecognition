@@ -11,13 +11,14 @@ def train(mtxLst):
     M -= Mmean[:, np.newaxis]
     Mtld = np.dot(M.transpose(), M)
     n = np.shape(Mtld)[1]
-    eigenval, eigenvec = qr(Mtld, 20000)
-    eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec)
+    # eigenval, eigenvec = qr(Mtld, 10000)
+    eigenval, eigenvec = np.linalg.eig(Mtld)
+    # eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec, 0)
     eigenvec = trn.reconstructVector(M, eigenvec)
-    for i in range(np.shape(eigenvec.transpose())[0]):
-        plt.imshow(np.reshape(eigenvec.transpose()[i], np.shape(mtxLst[0])))
-        plt.gray()
-        plt.show()
+    # for i in range(np.shape(eigenvec.transpose())[0]):
+    #     plt.imshow(np.reshape(eigenvec.transpose()[i], np.shape(mtxLst[0])))
+    #     plt.gray()
+    #     plt.show()
     print "eigenvec shape: ", np.shape(eigenvec)
     for i in range(n):
         img = M.transpose()[i]
