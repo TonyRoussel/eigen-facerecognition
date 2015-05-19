@@ -8,6 +8,9 @@ def train(mtxLst):
     thetas = list()
     M = trn.concatMatrix(mtxLst)
     Mmean = M.mean(axis=1)
+    plt.imshow(np.reshape(Mmean, np.shape(mtxLst[0])))
+    plt.gray()
+    plt.show()
     M -= Mmean[:, np.newaxis]
     Mtld = np.dot(M.transpose(), M)
     n = np.shape(Mtld)[1]
@@ -19,6 +22,7 @@ def train(mtxLst):
     #     plt.imshow(np.reshape(eigenvec.transpose()[i], np.shape(mtxLst[0])))
     #     plt.gray()
     #     plt.show()
+    # eigenvec = np.insert(eigenvec, 0, np.ones(np.shape(eigenvec)[0]), axis=1)
     print "eigenvec shape: ", np.shape(eigenvec)
     for i in range(n):
         img = M.transpose()[i]
