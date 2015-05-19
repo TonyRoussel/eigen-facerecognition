@@ -1,5 +1,6 @@
 from training import gradDescent
 from constants import learRate
+from constants import maxIteration
 import numpy as np
 
 def submit(mtx, mean, eigenvec):
@@ -7,7 +8,7 @@ def submit(mtx, mean, eigenvec):
     mtxflat = mtxflat[:, np.newaxis] - mean[:, np.newaxis]
 #     eigenvecOne = np.insert(eigenvec, 0, np.ones(np.shape(eigenvec)[0]), axis=1)
     theta = np.ones(np.shape(eigenvec)[1])
-    theta = gradDescent(eigenvec, np.matrix(mtxflat).transpose(), np.matrix(theta).transpose(), learRate)
+    theta = gradDescent(eigenvec, np.matrix(mtxflat).transpose(), np.matrix(theta).transpose(), learRate, maxIteration)
     return theta
 
 def compare(thetaSubmit, thetas):
