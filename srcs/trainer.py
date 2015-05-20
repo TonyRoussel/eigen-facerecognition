@@ -31,7 +31,7 @@ def train(mtxLst):
         theta = trn.gradDescent(eigenvec, np.matrix(img), np.matrix(theta).transpose(), learRate, maxIteration)
         print "Descent terminated: ", i, " / ", n - 1  ######
         thetas.append(theta)
-    # plt.imshow(np.reshape(np.dot(eigenvec, thetas[0]), np.shape(mtxLst[0])))
-    # plt.gray()
-    # plt.show()
+    plt.imshow(np.reshape(np.dot(eigenvec, thetas[0]), np.shape(mtxLst[0])))
+    plt.gray()
+    plt.show()
     return (Mmean, eigenvec, thetas)
