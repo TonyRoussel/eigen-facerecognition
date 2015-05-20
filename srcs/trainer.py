@@ -17,7 +17,7 @@ def train(mtxLst):
     n = np.shape(Mtld)[1]
     # eigenval, eigenvec = qr(Mtld, 10000)
     eigenval, eigenvec = np.linalg.eig(Mtld)
-    # eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec, 0)
+    # eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec, -2)
     eigenvec = trn.reconstructVector(M, eigenvec)
     # for i in range(np.shape(eigenvec.transpose())[0]):
     #     plt.imshow(np.reshape(eigenvec.transpose()[i], np.shape(mtxLst[0])))
