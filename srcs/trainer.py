@@ -15,8 +15,8 @@ def train(mtxLst):
     M -= Mmean[:, np.newaxis]
     Mtld = np.dot(M.transpose(), M)
     n = np.shape(Mtld)[1]
-    eigenval, eigenvec = qr(Mtld, 200)
-    # eigenval, eigenvec = np.linalg.eig(Mtld)
+    # eigenval, eigenvec = qr(Mtld, 200)
+    eigenval, eigenvec = np.linalg.eig(Mtld)
     # eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec, -2)
     eigenvec = trn.reconstructVector(M, eigenvec)
     # for i in range(np.shape(eigenvec.transpose())[0]):
