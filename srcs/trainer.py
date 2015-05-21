@@ -9,14 +9,14 @@ def train(mtxLst):
     thetas = list()
     M = trn.concatMatrix(mtxLst)
     Mmean = M.mean(axis=1)
-    plt.imshow(np.reshape(Mmean, np.shape(mtxLst[0])))
-    plt.gray()
-    plt.show()
+    # plt.imshow(np.reshape(Mmean, np.shape(mtxLst[0])))
+    # plt.gray()
+    # plt.show()
     M -= Mmean[:, np.newaxis]
     Mtld = np.dot(M.transpose(), M)
     n = np.shape(Mtld)[1]
-    # eigenval, eigenvec = qr(Mtld, 10000)
-    eigenval, eigenvec = np.linalg.eig(Mtld)
+    eigenval, eigenvec = qr(Mtld, 200)
+    # eigenval, eigenvec = np.linalg.eig(Mtld)
     # eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec, -2)
     eigenvec = trn.reconstructVector(M, eigenvec)
     # for i in range(np.shape(eigenvec.transpose())[0]):
@@ -31,7 +31,7 @@ def train(mtxLst):
         theta = trn.gradDescent(eigenvec, np.matrix(img), np.matrix(theta).transpose(), learRate, maxIteration)
         print "Descent terminated: ", i, " / ", n - 1  ######
         thetas.append(theta)
-    plt.imshow(np.reshape(np.dot(eigenvec, thetas[0]), np.shape(mtxLst[0])))
-    plt.gray()
-    plt.show()
+    # plt.imshow(np.reshape(np.dot(eigenvec, thetas[0]), np.shape(mtxLst[0])))
+    # plt.gray()
+    # plt.show()
     return (Mmean, eigenvec, thetas)
