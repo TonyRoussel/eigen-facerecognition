@@ -41,8 +41,7 @@ def gradDescentIteration(X, y, theta, alpha, numIter):
         diff = H.transpose() - y
         sigma = np.dot(X.transpose(), diff.transpose()) / m
         theta = theta - alpha * sigma
-        # print "Cost ", i + 1, " / ", numIter, ": ", computeCostMulti(X, y, theta)
-    print "last iteration cost: ", computeCostMulti(X, y, theta)
+    print "Last Iteration Cost: ", computeCostMulti(X, y, theta)
     return theta
 
 def gradDescentConvergence(X, y, theta, alpha):
@@ -51,7 +50,6 @@ def gradDescentConvergence(X, y, theta, alpha):
     cost = computeCostMulti(X, y, theta)
     costp = cost + 1
     diff = costp - cost
-    # while (diff > 2.2250738585072014e-308):
     while (diff > 1e-100):
         H = np.dot(X, theta)
         diff = H.transpose() - y
@@ -60,7 +58,6 @@ def gradDescentConvergence(X, y, theta, alpha):
         costp = cost
         cost = computeCostMulti(X, y, theta)
         diff = costp - cost
-        # print "Loop ", i + 1, ": ", diff
         i = i + 1
-    print "convergence cost (", i + 1,  "iteration ): ", computeCostMulti(X, y, theta)
+    print "Convergence Cost (", i + 1,  "iteration ): ", computeCostMulti(X, y, theta)
     return theta

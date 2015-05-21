@@ -10,7 +10,6 @@ def qr(toCompute, maxIter = 100):
         q, R = qrDecomposition(A[0])
         A[1] = np.dot(R, q)
         Q = Q.dot(q)
-        print "QR: ", k, "/", maxIter
     return np.diagonal(A[1]), Q
 
 def qrDecomposition(A):
@@ -18,8 +17,8 @@ def qrDecomposition(A):
     Q = np.eye(m)
     for i in range(n - (m == n)):
         H = np.eye(m)
-        H[i:, i:] = make_householderOriginal(A[i:, i])
-#         H[i:, i:] = make_householderSimplification(A[i:, i])
+#         H[i:, i:] = make_householderOriginal(A[i:, i])
+        H[i:, i:] = make_householderSimplification(A[i:, i])
         Q = np.dot(Q, H)
         A = np.dot(H, A)
     return Q, A

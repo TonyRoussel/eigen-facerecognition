@@ -1,6 +1,4 @@
-fileloadLimit = 500
 img_extension = ".pgm"
-learRate = 1e-10
+learRate = 1e-11
 # maxIteration = None
 maxIteration = 300
-# learRate = 1e-3
