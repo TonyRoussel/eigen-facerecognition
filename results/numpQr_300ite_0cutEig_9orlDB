@@ -1,0 +1,288 @@
+file loading:  0  /  72
+file loading:  1  /  72
+file loading:  2  /  72
+file loading:  3  /  72
+file loading:  4  /  72
+file loading:  5  /  72
+file loading:  6  /  72
+file loading:  7  /  72
+file loading:  8  /  72
+file loading:  9  /  72
+file loading:  10  /  72
+file loading:  11  /  72
+file loading:  12  /  72
+file loading:  13  /  72
+file loading:  14  /  72
+file loading:  15  /  72
+file loading:  16  /  72
+file loading:  17  /  72
+file loading:  18  /  72
+file loading:  19  /  72
+file loading:  20  /  72
+file loading:  21  /  72
+file loading:  22  /  72
+file loading:  23  /  72
+file loading:  24  /  72
+file loading:  25  /  72
+file loading:  26  /  72
+file loading:  27  /  72
+file loading:  28  /  72
+file loading:  29  /  72
+file loading:  30  /  72
+file loading:  31  /  72
+file loading:  32  /  72
+file loading:  33  /  72
+file loading:  34  /  72
+file loading:  35  /  72
+file loading:  36  /  72
+file loading:  37  /  72
+file loading:  38  /  72
+file loading:  39  /  72
+file loading:  40  /  72
+file loading:  41  /  72
+file loading:  42  /  72
+file loading:  43  /  72
+file loading:  44  /  72
+file loading:  45  /  72
+file loading:  46  /  72
+file loading:  47  /  72
+file loading:  48  /  72
+file loading:  49  /  72
+file loading:  50  /  72
+file loading:  51  /  72
+file loading:  52  /  72
+file loading:  53  /  72
+file loading:  54  /  72
+file loading:  55  /  72
+file loading:  56  /  72
+file loading:  57  /  72
+file loading:  58  /  72
+file loading:  59  /  72
+file loading:  60  /  72
+file loading:  61  /  72
+file loading:  62  /  72
+file loading:  63  /  72
+file loading:  64  /  72
+file loading:  65  /  72
+file loading:  66  /  72
+file loading:  67  /  72
+file loading:  68  /  72
+file loading:  69  /  72
+file loading:  70  /  72
+file loading:  71  /  72
+file loading:  0  /  18
+file loading:  1  /  18
+file loading:  2  /  18
+file loading:  3  /  18
+file loading:  4  /  18
+file loading:  5  /  18
+file loading:  6  /  18
+file loading:  7  /  18
+file loading:  8  /  18
+file loading:  9  /  18
+file loading:  10  /  18
+file loading:  11  /  18
+file loading:  12  /  18
+file loading:  13  /  18
+file loading:  14  /  18
+file loading:  15  /  18
+file loading:  16  /  18
+file loading:  17  /  18
+eigenvec shape:  (10304, 36)
+last iteration cost:  44777310.8631
+Descent terminated:  0  /  71
+last iteration cost:  49070024.9682
+Descent terminated:  1  /  71
+last iteration cost:  50174079.7115
+Descent terminated:  2  /  71
+last iteration cost:  42391493.3576
+Descent terminated:  3  /  71
+last iteration cost:  43119951.6882
+Descent terminated:  4  /  71
+last iteration cost:  44205994.9742
+Descent terminated:  5  /  71
+last iteration cost:  46962963.8717
+Descent terminated:  6  /  71
+last iteration cost:  44785929.2866
+Descent terminated:  7  /  71
+last iteration cost:  45090457.5348
+Descent terminated:  8  /  71
+last iteration cost:  46713762.3745
+Descent terminated:  9  /  71
+last iteration cost:  44086976.0891
+Descent terminated:  10  /  71
+last iteration cost:  53863160.4156
+Descent terminated:  11  /  71
+last iteration cost:  47914827.4845
+Descent terminated:  12  /  71
+last iteration cost:  51851269.2334
+Descent terminated:  13  /  71
+last iteration cost:  45587410.7565
+Descent terminated:  14  /  71
+last iteration cost:  56782301.8997
+Descent terminated:  15  /  71
+last iteration cost:  51187367.6675
+Descent terminated:  16  /  71
+last iteration cost:  51477976.1074
+Descent terminated:  17  /  71
+last iteration cost:  50023892.6173
+Descent terminated:  18  /  71
+last iteration cost:  46459552.162
+Descent terminated:  19  /  71
+last iteration cost:  55897578.9612
+Descent terminated:  20  /  71
+last iteration cost:  47050215.174
+Descent terminated:  21  /  71
+last iteration cost:  45261202.2519
+Descent terminated:  22  /  71
+last iteration cost:  44560717.0661
+Descent terminated:  23  /  71
+last iteration cost:  48802762.3331
+Descent terminated:  24  /  71
+last iteration cost:  43262970.5698
+Descent terminated:  25  /  71
+last iteration cost:  46681558.8068
+Descent terminated:  26  /  71
+last iteration cost:  49196081.0563
+Descent terminated:  27  /  71
+last iteration cost:  51765770.1997
+Descent terminated:  28  /  71
+last iteration cost:  46714682.5023
+Descent terminated:  29  /  71
+last iteration cost:  45912425.8954
+Descent terminated:  30  /  71
+last iteration cost:  52618986.3943
+Descent terminated:  31  /  71
+last iteration cost:  50986260.224
+Descent terminated:  32  /  71
+last iteration cost:  48756089.0022
+Descent terminated:  33  /  71
+last iteration cost:  53656310.6717
+Descent terminated:  34  /  71
+last iteration cost:  50472974.0851
+Descent terminated:  35  /  71
+last iteration cost:  43903076.9823
+Descent terminated:  36  /  71
+last iteration cost:  55915521.4533
+Descent terminated:  37  /  71
+last iteration cost:  50312639.21
+Descent terminated:  38  /  71
+last iteration cost:  48425262.7531
+Descent terminated:  39  /  71
+last iteration cost:  46807409.3306
+Descent terminated:  40  /  71
+last iteration cost:  55159343.6155
+Descent terminated:  41  /  71
+last iteration cost:  46918449.5098
+Descent terminated:  42  /  71
+last iteration cost:  45655704.6591
+Descent terminated:  43  /  71
+last iteration cost:  43921339.6541
+Descent terminated:  44  /  71
+last iteration cost:  45839830.3788
+Descent terminated:  45  /  71
+last iteration cost:  50115298.1024
+Descent terminated:  46  /  71
+last iteration cost:  43616317.0455
+Descent terminated:  47  /  71
+last iteration cost:  46834500.072
+Descent terminated:  48  /  71
+last iteration cost:  51689015.4749
+Descent terminated:  49  /  71
+last iteration cost:  52521353.4685
+Descent terminated:  50  /  71
+last iteration cost:  47753405.4234
+Descent terminated:  51  /  71
+last iteration cost:  50734977.0698
+Descent terminated:  52  /  71
+last iteration cost:  47679135.0459
+Descent terminated:  53  /  71
+last iteration cost:  48408519.285
+Descent terminated:  54  /  71
+last iteration cost:  46099587.9915
+Descent terminated:  55  /  71
+last iteration cost:  52035419.2499
+Descent terminated:  56  /  71
+last iteration cost:  47953053.3837
+Descent terminated:  57  /  71
+last iteration cost:  49223349.3844
+Descent terminated:  58  /  71
+last iteration cost:  47721121.2168
+Descent terminated:  59  /  71
+last iteration cost:  44927078.9054
+Descent terminated:  60  /  71
+last iteration cost:  48332588.9965
+Descent terminated:  61  /  71
+last iteration cost:  45529550.9129
+Descent terminated:  62  /  71
+last iteration cost:  42815178.7579
+Descent terminated:  63  /  71
+last iteration cost:  44612448.1314
+Descent terminated:  64  /  71
+last iteration cost:  44054885.9232
+Descent terminated:  65  /  71
+last iteration cost:  50789140.9985
+Descent terminated:  66  /  71
+last iteration cost:  49659425.7935
+Descent terminated:  67  /  71
+last iteration cost:  48016993.7277
+Descent terminated:  68  /  71
+last iteration cost:  52440782.8099
+Descent terminated:  69  /  71
+last iteration cost:  44895783.6866
+Descent terminated:  70  /  71
+last iteration cost:  51278467.9867
+Descent terminated:  71  /  71
+Mean:  [ 96.88888889  97.19444444  97.19444444 ...,  69.55555556  68.52777778
+  68.90277778]
+eigenvec: 
+[[  717.75543729   -13.63753755   -75.11343491 ...,    87.03227508
+    -42.13666284    95.50391127]
+ [  712.02391005   -12.85908678   -80.59735887 ...,    90.98844297
+    -32.57341363    99.22794992]
+ [  711.70314966   -11.648162     -69.88430745 ...,    98.57303777
+    -29.08482165    94.70800891]
+ ..., 
+ [ 1139.8864403    -87.52383332   -42.57667544 ...,    76.71106459
+    -75.55834238   196.68810889]
+ [ 1169.70202924  -134.05159394   -93.58776596 ...,    85.28502621
+    -50.61688637   156.10907307]
+ [ 1142.04912069   -89.26493667   -40.97930376 ...,    89.68394148
+    -64.9836286    198.36542548]]
+last iteration cost:  65364726.7701
+s1_0001.pgm  -->  s1_0008.pgm [X]
+last iteration cost:  68922831.8925
+s1_0002.pgm  -->  s1_0009.pgm [X]
+last iteration cost:  67145422.2315
+s2_0001.pgm  -->  s2_0004.pgm [X]
+last iteration cost:  61461771.2969
+s2_0002.pgm  -->  s2_0008.pgm [X]
+last iteration cost:  66484944.4675
+s3_0001.pgm  -->  s3_0004.pgm [X]
+last iteration cost:  68244511.3161
+s3_0002.pgm  -->  s3_0010.pgm [X]
+last iteration cost:  65237612.1431
+s4_0001.pgm  -->  s4_0009.pgm [X]
+last iteration cost:  66772607.3318
+s4_0002.pgm  -->  s4_0006.pgm [X]
+last iteration cost:  62078067.3925
+s5_0001.pgm  -->  s5_0005.pgm [X]
+last iteration cost:  65800794.012
+s5_0002.pgm  -->  s5_0010.pgm [X]
+last iteration cost:  65972261.1255
+s6_0001.pgm  -->  s6_0005.pgm [X]
+last iteration cost:  52051664.6221
+s6_0002.pgm  -->  s6_0005.pgm [X]
+last iteration cost:  61244949.3148
+s7_0001.pgm  -->  s7_0004.pgm [X]
+last iteration cost:  71898342.3554
+s7_0002.pgm  -->  s7_0005.pgm [X]
+last iteration cost:  61776982.2463
+s8_0001.pgm  -->  s8_0003.pgm [X]
+last iteration cost:  60936967.4801
+s8_0002.pgm  -->  s8_0004.pgm [X]
+last iteration cost:  61165404.588
+s9_0001.pgm  -->  s9_0004.pgm [X]
+last iteration cost:  66561230.8363
+s9_0002.pgm  -->  s9_0006.pgm [X]
+18  /  18 ===> 100.0 %
