@@ -12,6 +12,12 @@ def extractEigenvecOnVal(eigval, eigvec, threshold = 1):
     delIdx = np.where(eigval < threshold)[0]
     return np.delete(eigvec, delIdx, axis=1)
 
+def extractEigenvecOnValPercent(eigval, eigvec, lowBound = .5, highBound = 1):
+    eigvecSorted = np.array([vec for (val, vec) in sorted(zip(eigval, eigvec))])
+    print "eigenvecS shape: ", np.shape(eigvecSorted), int(np.shape(eigvecSorted)[1] * lowBound)
+    # newList = originalList[int(len(originalList) * .05) : int(len(originalList) * .95)]
+    return eigvecSorted.transpose()[int(np.shape(eigvecSorted)[1] * lowBound):]
+
 def reconstructVector(M, eigvec):
     eigvecT = eigvec.transpose()
     szeNewM = (np.shape(eigvec)[1], np.shape(M)[0])

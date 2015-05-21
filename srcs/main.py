@@ -8,7 +8,6 @@ from random import shuffle
 if len(sys.argv) != 3:
     exit(1)
 trainD = fl.loadmatrixs(sys.argv[1])
-validD = fl.loadmatrixs(sys.argv[2])
 # shuffle(fm)
 # trainD, validD = fl.split_list(fm, 90)
 ftrainD, mtrainD = zip(*trainD)
@@ -17,6 +16,7 @@ mean, eigenvec, thetas = train(mtrainD)
 print "Mean: ", mean
 print "eigenvec: \n", eigenvec
 # print "thetas: \n", thetas
+validD = fl.loadmatrixs(sys.argv[2])
 count = 0
 for idx, data in enumerate(validD):
     success = False

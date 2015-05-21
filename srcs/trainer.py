@@ -15,9 +15,12 @@ def train(mtxLst):
     M -= Mmean[:, np.newaxis]
     Mtld = np.dot(M.transpose(), M)
     n = np.shape(Mtld)[1]
-    # eigenval, eigenvec = qr(Mtld, 200)
+    # eigenval, eigenvec = qr(Mtld, 400)
     eigenval, eigenvec = np.linalg.eig(Mtld)
     # eigenvec = trn.extractEigenvecOnVal(eigenval, eigenvec, -2)
+    print "eigenvec shape: ", np.shape(eigenvec)
+    eigenvec = trn.extractEigenvecOnValPercent(eigenval, eigenvec)
+    print "eigenvec shape: ", np.shape(eigenvec)
     eigenvec = trn.reconstructVector(M, eigenvec)
     # for i in range(np.shape(eigenvec.transpose())[0]):
     #     plt.imshow(np.reshape(eigenvec.transpose()[i], np.shape(mtxLst[0])))
@@ -25,6 +28,7 @@ def train(mtxLst):
     #     plt.show()
     # eigenvec = np.insert(eigenvec, 0, np.ones(np.shape(eigenvec)[0]), axis=1)
     print "eigenvec shape: ", np.shape(eigenvec)
+    exit(1)
     for i in range(n):
         img = M.transpose()[i]
         theta = np.ones(np.shape(eigenvec)[1])
