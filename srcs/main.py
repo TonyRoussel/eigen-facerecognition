@@ -19,6 +19,7 @@ for idx, data in enumerate(validD):
     success = False
     filename, mtx = data
     thetaSubmit = subm.submit(mtx, mean, eigenvec)
+    print "w:", thetaSubmit 
     matchIdx = subm.compareAvgGap(thetaSubmit, thetas)
     if filename[:filename.rfind("_")] == ftrainD[matchIdx][:ftrainD[matchIdx].rfind("_")]:
         success = True
