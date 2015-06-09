@@ -10,8 +10,7 @@ def submit(mtx, mean, eigenvec):
     mtxflat = np.vstack(list(mtxflat))
     mtxflat -= mean[:, np.newaxis]
     mtxflat = mtxflat.transpose()[0]
-    theta = np.ones(np.shape(eigenvec)[1])
-    theta = gradDescent(eigenvec, np.matrix(mtxflat), np.matrix(theta).transpose(), learRate, maxIteration)
+    theta = np.dot(mtxflat.transpose(), eigenvec)
     return theta
 
 def compare(thetaSubmit, thetas):
